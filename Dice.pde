@@ -28,7 +28,7 @@ class Die {
     stroke(0);
     rectMode(CENTER);
     fill(random(100, 255),random(100, 255), random(100, 255));
-    rect(w, h, s, s);
+    rect(w, h, s, s, 30);
     // One
     if (x == 1) {
       fill(0);
