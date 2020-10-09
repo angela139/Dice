@@ -8,8 +8,11 @@ int fives = 0;
 int sixs = 0;
 class Die {
   
-  int size = 100;
-  int distance = size/2 - size/5;
+  //size of square
+  int s = 100;
+  // distance between dots
+  int distance = s/2 - s/5;
+  // random number 1-6
   int x = (int)(random(1, 7));
   int w;
   int h;
@@ -25,61 +28,61 @@ class Die {
     stroke(0);
     rectMode(CENTER);
     fill(random(100, 255),random(100, 255), random(100, 255));
-    rect(w, h, size, size);
+    rect(w, h, s, s);
     // One
     if (x == 1) {
       fill(0);
-      ellipse(w, h, size/5, size/5);
+      ellipse(w, h, s/5, s/5);
       sum++;
       ones++;
     }
     // Two
     else if (x == 2) {
       fill(0);
-      ellipse(w + distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h - distance, size/5, size/5);
+      ellipse(w + distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h - distance, s/5, s/5);
       sum += 2;
       twos++;
     }
     // Three
     else if (x == 3) {
       fill(0);
-      ellipse(w, h, size/5, size/5);
-      ellipse(w + distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h - distance, size/5, size/5);
+      ellipse(w, h, s/5, s/5);
+      ellipse(w + distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h - distance, s/5, s/5);
       sum += 3;
       threes++;
     }
     // Four
     else if (x == 4) {
       fill(0);
-      ellipse(w + distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h - distance, size/5, size/5);
-      ellipse(w + distance, h - distance, size/5, size/5);
-      ellipse(w - distance, h + distance, size/5, size/5);
+      ellipse(w + distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h - distance, s/5, s/5);
+      ellipse(w + distance, h - distance, s/5, s/5);
+      ellipse(w - distance, h + distance, s/5, s/5);
       sum += 4;
       fours++;
     }
     // Five
     else if (x == 5) {
       fill(0);
-      ellipse(w, h, size/5, size/5);
-      ellipse(w + distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h - distance, size/5, size/5);
-      ellipse(w + distance, h - distance, size/5, size/5);
-      ellipse(w - distance, h + distance, size/5, size/5);
+      ellipse(w, h, s/5, s/5);
+      ellipse(w + distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h - distance, s/5, s/5);
+      ellipse(w + distance, h - distance, s/5, s/5);
+      ellipse(w - distance, h + distance, s/5, s/5);
       sum += 5;
       fives++;
     }
     // Six
     else {
       fill(0);
-      ellipse(w + distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h - distance, size/5, size/5);
-      ellipse(w + distance, h - distance, size/5, size/5);
-      ellipse(w - distance, h + distance, size/5, size/5);
-      ellipse(w - distance, h, size/5, size/5);
-      ellipse(w + distance, h, size/5, size/5);
+      ellipse(w + distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h - distance, s/5, s/5);
+      ellipse(w + distance, h - distance, s/5, s/5);
+      ellipse(w - distance, h + distance, s/5, s/5);
+      ellipse(w - distance, h, s/5, s/5);
+      ellipse(w + distance, h, s/5, s/5);
       sum += 6;
       sixs++;
     }
